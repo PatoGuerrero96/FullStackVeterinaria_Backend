@@ -25,8 +25,5 @@ app.use(cors(corsOptions));
 
 app.use("/api/veterinarios", veterinarioRoutes );
 app.use("/api/pacientes", pacienteRoutes );
-var port_number = server.listen(process.env.PORT || 3000);
+var port_number = server.listen(process.env.PORT || 5000);
 app.listen(port_number);
-var distDir = __dirname + "/dist/";
-
-app.use(express.static(distDir));
