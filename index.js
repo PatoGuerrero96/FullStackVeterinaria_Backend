@@ -25,5 +25,7 @@ app.use(cors(corsOptions));
 
 app.use("/api/veterinarios", veterinarioRoutes );
 app.use("/api/pacientes", pacienteRoutes );
-var port_number = server.listen(process.env.PORT || 5000);
-app.listen(port_number);
+const port = process.env.PORT || 8000; 
+server.listen(port, () => {
+console.log("app run", port)
+});
