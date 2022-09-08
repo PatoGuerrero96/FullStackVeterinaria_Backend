@@ -25,7 +25,6 @@ app.use(cors(corsOptions));
 
 app.use("/api/veterinarios", veterinarioRoutes );
 app.use("/api/pacientes", pacienteRoutes );
-const port = process.env.PORT || 8000; 
-server.listen(port, () => {
-console.log("app run", port)
-});
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
